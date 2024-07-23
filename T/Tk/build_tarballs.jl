@@ -7,7 +7,7 @@ version = v"8.6.14"
 
 # Collection of sources required to build Tk
 sources = [
-    ArchiveSource("https://downloads.sourceforge.net/sourceforge/tcl/tk$(version).src.tar.gz",
+    ArchiveSource("https://downloads.sourceforge.net/sourceforge/tcl/tk$(version)-src.tar.gz",
                   "8ffdb720f47a6ca6107eac2dd877e30b0ef7fac14f3a84ebbd0b3612cee41a94"),
     DirectorySource("./bundled"),
 ]
