@@ -3,12 +3,12 @@
 using BinaryBuilder
 
 name = "Tk"
-version = v"8.6.11" # current version number is actually 8.6.11.1
+version = v"8.6.14"
 
 # Collection of sources required to build Tk
 sources = [
     ArchiveSource("https://downloads.sourceforge.net/sourceforge/tcl/tk$(version).1-src.tar.gz",
-                  "006CAB171BEECA6A968B6D617588538176F27BE232A2B334A0E96173E89909BE"),
+                  "8ffdb720f47a6ca6107eac2dd877e30b0ef7fac14f3a84ebbd0b3612cee41a94"),
     DirectorySource("./bundled"),
 ]
 
