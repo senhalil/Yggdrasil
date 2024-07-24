@@ -62,11 +62,11 @@ products = [
 
 # Dependencies that must be installed before this package can be built
 dependencies = [
-    BuildDependency("Xorg_xorgproto_jll"),
+    BuildDependency("Xorg_xorgproto_jll"; platforms=x11_platforms),
     Dependency("Tcl_jll"),
-    Dependency("Xorg_libXft_jll"),
+    Dependency("Xorg_libXft_jll"; platforms=x11_platforms)
 ]
 
 # Build the tarballs, and possibly a `build.jl` as well.
 build_tarballs(ARGS, name, version, sources, script, platforms, products, dependencies,
-               julia_compat="1.6")
+               julia_compat="1.6", clang_use_lld=false)
