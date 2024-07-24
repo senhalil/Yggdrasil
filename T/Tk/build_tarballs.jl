@@ -21,6 +21,9 @@ else
 fi
 
 export CFLAGS="-I${prefix}/include ${CFLAGS}"
+if [[ "${target}" == aarch64-apple-* ]]; then
+    export CPPFLAGS="-mmacosx-version-min=14.0 ${CPPFLAGS}"
+fi
 
 FLAGS=(--enable-threads --disable-rpath)
 if [[ "${target}" == x86_64-* ]]; then
@@ -70,4 +73,4 @@ dependencies = [
 
 # Build the tarballs, and possibly a `build.jl` as well.
 build_tarballs(ARGS, name, version, sources, script, platforms, products, dependencies,
-               julia_compat="1.6", clang_use_lld=false, preferred_gcc_version=v"9")
+               julia_compat="1.6")
