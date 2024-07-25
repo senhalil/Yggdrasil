@@ -21,9 +21,6 @@ else
 fi
 
 export CFLAGS="-I${prefix}/include ${CFLAGS}"
-if [[ "${target}" == aarch64-apple-* ]]; then
-    export CPPFLAGS="-mmacosx-version-min=14.0 ${CPPFLAGS}"
-fi
 
 FLAGS=(--enable-threads --disable-rpath)
 if [[ "${target}" == x86_64-* ]]; then
